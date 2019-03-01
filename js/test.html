@@ -1,0 +1,292 @@
+<script>
+    // function factorial(n){
+    //     var res= 1;
+    //     for(var i=1; i<=n; i++)
+    //         res *= i;
+    //     return res;
+    // }
+    // sum = 0;
+    // for(var i=1;i<=10;i++)
+    //     sum += factorial(i);
+    // console.log(sum);
+
+
+    // for(var i=1; i<=10; i++){
+    //     for(var j=1; j<=i; j++){
+    //         document.write(j+" ");
+    //     }
+    //     document.write("<br>");
+    // }
+
+        // for(var i=1; i<=1; i++){
+        //     for(var k=10; k>i; k--){
+        //         document.write("&nbsp")
+        //     }
+        //     for(var j=1; j<=i; j++){
+        //         document.write("* ");
+        //     }
+        //     document.write("<br>");
+        // }
+
+        // function fac(n){
+        //     if(n==1)
+        //         return 1;
+        //     return n*fac(n-1);
+        // }
+        // document.write(fac(10));
+
+            // for(var x=1000; x<=9999; x++){
+            //     var four= Math.floor(x/1000);
+            //     var temp= x-four*1000
+            //     var three= Math.floor(temp/100);
+            //     temp= temp-three*100;
+            //     var two=Math.floor(temp/10);
+            //     if((x%13==0)&&(three+two==four))
+            //         document.write("x="+x+"<br>");
+            // }
+
+
+            // for(var i=1;i<=10;i++){
+            //     for(var k=0; ;k++){
+            //         document.write(" ");
+            //     }
+            //     for(var j=0;j<2*i+1;j++){
+            //         document.write("* ");
+            //     }
+            //     document.write("<br>");
+            // }
+
+
+                // var person = {
+                //     name:"aaa",
+                //     age:28,
+                //     code:function(){
+
+                //     }
+                // };
+                // console.log(person.age)
+                // for(var i in person){
+                //     console.log(person.i)
+                // }
+
+
+
+                // function count(x){
+                //     result=4*x*x+3*x+2;
+                //     return result;
+                // }
+                // var x= prompt("请输入一个数");
+                // document.write("result="+count(x));
+
+                    // function Min(x,y){
+                    //     return x<y?x:y ;
+                    // }
+                    // var x=prompt("请输入x");
+                    // var y=prompt("请输入y");
+                    // document.write(Min(x,y));
+
+
+                    // function div(x){
+                    //     if(x%3==0&&x%5==0&&x%7==0)
+                    //         return true;
+                    // }
+                    // var count=0;
+                    // for(var i=1; i<=9999; i++){
+                    //     if(div(i)==true){
+                    //         document.write(i+" ");
+                    //         count++;
+                    //         if(count%6==0)
+                    //             document.write("<br>");
+                    //     }
+                    // }
+
+                    // function prime(x){
+                    //     for(var i=2; i<x; i++){
+                    //         if(x%i==0) 
+                    //             break;
+                    //     }
+                    //     if(i==x){
+                    //         return true;
+                    //     }else{
+                    //         return false
+                    //     }
+                    // }
+                    // var count=0;
+                    // for(var i=100;i<=1000; i++){
+                    //     if(prime(i)==true){
+                    //         document.write(i+" ");
+                    //         count++;
+                    //         if(count%6==0)
+                    //             document.write("<br>");
+                    //     }
+                    // }
+
+    // function factorial(n){
+    //     var res= 1;
+    //     for(var i=1; i<=n; i++)
+    //         res *= i;
+    //     return res;
+    // }
+    // document.write("12!-10!="+ (factorial(12)-factorial(10)));
+
+
+
+        // function Fi(n){
+        //     if(n==1||n==2)
+        //         return 1;
+        //     return Fi(n-1)+Fi(n-2);
+        // }
+        // document.write(Fi(7));
+
+        // function Fib(n){
+        //     if(n==1||n==2)
+        //         return 1;
+        //     var a=1,b=1;
+        //     var result=a+b;
+        //     for(var i=4;i<=n;i++){
+        //         a=b;
+        //         b=result;
+        //         result=a+b;
+        //     }
+        //     return result;
+        // }
+        // document.write(Fib(7));
+
+            // function pi(n){
+            //     var odd=0,even=0,sum=0;
+            //     for(var i=1; i<=n; i++){
+            //         if(i%2!=0){
+            //             sum += 1/(2*i-1);
+            //         }else{
+            //             sum -= 1/(2*i-1)
+            //         }
+            //     }
+            //     return 4*sum;
+            // }
+            // document.write("n=100时，π="+pi(100)+"<br>");
+            // document.write("n=500时，π="+pi(500)+"<br>");
+            // document.write("n=1000时，π="+pi(1000)+"<br>");
+            // document.write("n=10000时，π="+pi(10000)+"<br>");
+                
+            // function Win(t,w){
+            //     return w/t;
+            // }
+            // function random(x,y){
+            //     return (Math.ceil(Math.random()*8))+1;
+            // }
+            // var lucky=random(1,9);
+            // var win=0;
+            // for(var i=0; i<100; i++){
+            //     var rand1 = random(1,9);
+            //     var rand2 = random(1,9);
+            //     var rand3 = random(1,9);
+            //     if(rand1==lucky||rand2==lucky||rand3==lucky){
+            //         win++
+            //     }
+            // }
+            // document.write(Win(100,win));
+
+
+            // function pi(n){
+            //     var odd=0,even=0,sum=0;
+            //     for(var i=1; i<=n; i++){
+            //         sum+=Math.pow(-1,i-1)*(1/(2*i-1));
+            //     }
+            //     return 4*sum;
+            // }
+            // document.write("n=100时，π="+pi(100)+"<br>");
+            // document.write("n=500时，π="+pi(500)+"<br>");
+            // document.write("n=1000时，π="+pi(1000)+"<br>");
+            // document.write("n=10000时，π="+pi(10000)+"<br>");
+
+        // function ran(){
+        //     return Math.floor(Math.random()*101);
+        // }
+
+            // function isLeapYear(year){
+            //     if((year%4==0&&year%4!=0)||year%400==0){
+            //         return true;
+            //     return false;
+            //     }
+            // }
+            // function DayofYear(yy,mm,dd){
+            //     var months=new Array(31,28,31,30,31,30,31,31,30,31,30,31);
+            //     var day = 0;
+            //     if(isLeapYear(yy))
+            //         months[1]=29;
+            //     else    
+            //         months[1]=28;
+            //     for(var i=0; i<mm-1; i++)
+            //         day+=months[i];
+            //     day+=dd;
+            //     return day;
+            // }
+            // day = DayofYear(2019,2,26);
+            // document.write(day);
+
+    // function Merge(s1,s2){
+    //     var len=s1.length<s2.length?s1.length:s2.length;
+    //     var temp=s1.length<s2.length?s2:s1;
+    //     temp=temp.substr(len,temp.length-len);
+    //     var merge="";
+    //     for(var i=0;i<len;i++){
+    //         merge += s1.charAt(i)+s2.charAt(i);
+    //     }
+    //     merge+=temp;
+    //     return merge;
+    // }
+    // document.write(Merge("abc","123456"));
+
+
+        // function collectDigits(s){
+        //     var digits="";
+        //     for(var i=0;i<s.length;i++){
+        //         if(0<=s[i]&&s[i]<=9)
+        //             digits+=s[i];
+        //     }
+        //     return digits;
+        // }
+        // document.write(collectDigits("slie112lisdf33"));
+
+        // function welcome(){
+        //     document.write("现在是"+new Date().getFullYear()+"年"+new Date().getMonth()+"月"+new Date().getDate()+"日");
+        //     document.write(new Date().getHours()+"时"+new Date().getMinutes()+"分"+new Date().getSeconds()+"秒")
+        //     document.write("星期"+new Date().getDay()+",欢迎您到访！<br>");
+        // }
+        // welcome();
+
+
+        // function Fi(n){
+        //     if(n==1||n==2)
+        //         return 1;
+        //     return Fi(n-1)+Fi(n-2);
+        // }
+        // var num=new Array();
+        // for(var i=0;i<40;i++){
+        //     num[i]=Fi(i+1);
+        // }
+        // var count=0;
+        // num=num.reverse();
+        // for(var i=0; i<num.length;i++){
+        //     document.write(num[i]+"&nbsp;")
+        //     count++;
+        //     if(count%6==0)
+        //         document.write("<br>");
+        // }
+
+
+
+
+            // setTimeout(function a(){
+            //     console.log(5);
+            // },2000)
+            // setTimeout(function a(){
+            //     console.log(6);
+            // },1000)
+            // console.log(2);
+            // console.log(3);
+
+
+        
+
+</script>

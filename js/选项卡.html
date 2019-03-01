@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .clear::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        #frame{
+            width: 450px;
+            height: 300px;
+            border: solid 1px #000;
+            position: absolute;
+            top: 100px;
+            left: 350px;
+        }
+        #frame .option{
+            background: #eaeaea;
+            width: 150px;
+            height: 30px;
+            float: left;
+            cursor: pointer;
+            text-align: center;
+            line-height: 30px;
+            border-bottom: solid #000  1px;
+        }
+        #content{
+            width: 450px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id = "frame" class='clear'>
+        <div class="option" id='one'>选项1</div>
+        <div class="option" id='two'>选项2</div>
+        <div class="option" id='three'>选项3</div>
+        <div id='content'></div>
+    </div>
+    <script>
+        var oBtn1 = document.getElementById("one");
+        var oBtn2 = document.getElementById("two");
+        var oBtn3 = document.getElementById("three");
+        var oCont = document.getElementById("content")
+        oBtn1.onclick = function(){
+            oBtn1.style.background = "#999";
+            oBtn2.style.background = "#eaeaea";
+            oBtn3.style.background = "#eaeaea";
+            oCont.style.background = "#999";
+            oBtn1.style.borderBottom = "none";
+            oBtn2.style.borderBottom = "solid 1px #000";
+            oBtn3.style.borderBottom = "solid 1px #000";
+            oCont.textContent = "这个是选项1";
+        }
+        oBtn2.onclick = function(){
+            oBtn1.style.background = "#eaeaea";
+            oBtn2.style.background = "#999900";
+            oBtn3.style.background = "#eaeaea";
+            oCont.style.background = "#999900";
+            oBtn2.style.borderBottom = "none";
+            oBtn3.style.borderBottom = "solid 1px #000";
+            oBtn1.style.borderBottom = "solid 1px #000";
+            oCont.textContent = "这个是选项2";
+        }
+        oBtn3.onclick = function(){
+            oBtn1.style.background = "#eaeaea";
+            oBtn2.style.background = "#eaeaea";
+            oBtn3.style.background = "#ccc";
+            oCont.style.background = "#ccc";
+            oBtn3.style.borderBottom = "none";
+            oBtn1.style.borderBottom = "solid 1px #000";
+            oBtn2.style.borderBottom = "solid 1px #000";
+            oCont.textContent = "这个是选项3";
+        }
+    </script>
+</body>
+</html>

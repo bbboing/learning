@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            #wrapper{
+                width: 450px;
+                height: 450px;
+            }
+            #wrapper div{
+                float: left;
+            }
+            .box{
+                width: 200px;
+                height: 200px
+            }
+            .left-top{
+                border: solid #b72637 1px;
+            }
+            .left-bottom{
+                border: solid #b72637 1px;
+                position: relative;
+                top: -1px;
+            }
+            .right-top{
+                border: solid #b72637 1px;
+                position: relative;
+                left: -1px;
+            }
+            .right-bottom{
+                border: solid #b72637 1px;
+                position: relative;
+                top: -1px;
+                left: -1px;
+                background: #000;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="box left-top"></div>
+            <div class="box right-top"></div>
+            <div class="box right-bottom"></div>
+            <div class="box left-bottom"></div>
+        </div>
+    </body>
+</html>

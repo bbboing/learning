@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            .circle,.circle::after{
+                width: 200px;
+                height: 200px;
+                border:solid 10px;
+                border-radius: 50%;
+                position: absolute;
+            }
+            .circle::after{
+                content: '';
+                top: -10px;
+                left: -10px;
+            }
+            .blue{
+                border-color: #00f;
+            }
+            .blue::after{
+                border-color: #00f;
+                /*z-index: 1;*/
+                /*border-bottom-color: transparent;*/
+            }
+            .black{
+                left: 230px;
+            }
+            .yellow{
+                border-color: #ffff00;
+                left: 460px;
+            }
+            .yellow::after{
+                border-color: #ff0;
+            }
+            .green{
+                border-color: #00ff00;
+                top: 110px;
+                left: 110px;
+            }
+            .green::after{
+                border-color: #0f0;
+            }
+            .red{
+                border-color: #ff0000 ;
+                top: 110px;
+                left: 340px;
+            }
+            .red::after{
+                border-color: #f00;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="circle blue"></div>
+    <div class="circle black"></div>
+    <div class="circle yellow"></div>
+    <div class="circle green"></div>
+    <div class="circle red"></div>
+    </body>
+</html>
