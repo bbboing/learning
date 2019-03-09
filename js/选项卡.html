@@ -33,6 +33,9 @@
             width: 450px;
             height: 300px;
         }
+        .selected{
+            background: #000;
+        }
     </style>
 </head>
 <body>
@@ -52,7 +55,7 @@
             oBtn2.style.background = "#eaeaea";
             oBtn3.style.background = "#eaeaea";
             oCont.style.background = "#999";
-            oBtn1.style.borderBottom = "none";
+            oBtn1.style.borderBottom = "solid 1px transparent";
             oBtn2.style.borderBottom = "solid 1px #000";
             oBtn3.style.borderBottom = "solid 1px #000";
             oCont.textContent = "这个是选项1";
@@ -62,7 +65,7 @@
             oBtn2.style.background = "#999900";
             oBtn3.style.background = "#eaeaea";
             oCont.style.background = "#999900";
-            oBtn2.style.borderBottom = "none";
+            oBtn2.style.borderBottom = "solid 1px transparent";
             oBtn3.style.borderBottom = "solid 1px #000";
             oBtn1.style.borderBottom = "solid 1px #000";
             oCont.textContent = "这个是选项2";
@@ -72,11 +75,19 @@
             oBtn2.style.background = "#eaeaea";
             oBtn3.style.background = "#ccc";
             oCont.style.background = "#ccc";
-            oBtn3.style.borderBottom = "none";
+            oBtn3.style.borderBottom = "solid 1px transparent";
             oBtn1.style.borderBottom = "solid 1px #000";
             oBtn2.style.borderBottom = "solid 1px #000";
             oCont.textContent = "这个是选项3";
         }
+        // var aLi = document.getElementsByTagName("li");
+        // for(var i=0;i<aLi.length;i++){
+        //     aLi[i].onclick = function(){
+        //         for(var j=0;j<aLi.length;i++)
+        //             this.className = '';
+        //         this.style.background =
+        //     }
+        // }
     </script>
 </body>
 </html>
