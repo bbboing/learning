@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        #container{
+            position: relative;
+        }
+        #container div{
+            display: none;
+            margin: 0 auto;
+        }
+        #container .selected{
+            display: block;
+        }
+        #img-box{
+            position: relative;
+            height: 500px;
+        }
+        #btn-box{
+            position: absolute;
+        }
+        #btn-box li{
+            width: 25px;
+            height: 5px;
+            background-color: #000;
+            opacity: .3;
+            float: left;
+            margin-right: 8px;
+            cursor: pointer;
+        }
+        #btn-box .avtive{
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id='container'>
+        <div id='img-box'>
+            <div class='selected banner1' >
+                <img src="https://img.alicdn.com/simba/img/TB1xIQMvH5YBuNjSspoSuveNFXa.jpg">
+            </div>
+            <div class='banner2'>
+                <img src="http://img.alicdn.com/imgextra/i1/114/TB2wYu7c8cXBuNjt_XoXXXIwFXa_!!114-0-luban.jpg_q100.jpg_.webp">
+            </div>
+            <div class='banner3'>
+                <img src="http://img.alicdn.com/tps/i4/TB17ITUFuuSBuNjSsplSuve8pXa.jpg">
+            </div>
+        </div>
+        <ul id='btn-box'>
+            <li class='acitve'></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

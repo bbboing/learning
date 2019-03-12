@@ -14,23 +14,22 @@
             width: 750px;
             height: 291px;
             margin: 120px auto;
+            overflow: hidden;
             position: relative;
         }
-        #img-box img{
-            display: none;
-            transition-property: all;
+        #img-box{
+            width: 3750px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            Transition: left 1s linear;
         }
-        #img-box .selected{
-            display: block;
+        #img-box img{
+            float: left;
         }
         #btn-box{
             position: absolute;
             right: 5px;
-            bottom: 3px;
-        }
-        #arrow{
-            position: absolute;
-            left: 5px;
             bottom: 3px;
         }
         #btn-box li{
@@ -72,72 +71,69 @@
 <body>
     <div id='container'>
         <div id='img-box'>
-            <img class='selected' src="img/1.jpg">
+            <img src="img/1.jpg">
             <img src="img/2.jpg">
             <img src="img/3.jpg">
             <img src="img/4.jpg">
             <img src="img/5.jpg">
         </div>
         <ul id='btn-box'>
-            <li class='active'>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
+                <li class='active'>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
         </ul>
         <span id='last'>&lt;</span>
         <span id='next'>&gt;</span>
     </div>
-
     <script>
-        var oContainer = document.getElementById('container');
-        var aImg = document.getElementsByTagName('img');
-        var oUl1 = document.getElementById('btn-box');
-        var aLi = oUl1.getElementsByTagName('li');
+        var oBtn = document.getElementById('btn-box');
+        var aLi = document.getElementsByTagName('li');
+        var oBox = document.getElementById('img-box');
+        var aImg = oBox.getElementsByTagName('img');
         var oNext = document.getElementById('next');
-        var oLast = document.getElementById('last');
+        var oLast = document. getElementById('last');
+        var oContainer = document.getElementById('container');
         var iNow = 0;
         var timer;
         run();
         for(var i=0;i<aLi.length;i++){
             aLi[i].index = i;
             aLi[i].onclick = function(){
+                change(this.index);
                 iNow = this.index;
-                change(this.index)
             }
         }
         oNext.onclick = function(){
             iNow++;
-            if(iNow == 5){
-                iNow = 0
-            }
+            if(iNow == 5)
+                iNow = 0;
             change(iNow);
         }
         oLast.onclick = function(){
             iNow--;
-            if(iNow < 0){
+            if(iNow<0)
                 iNow = 4;
-            }
             change(iNow);
-        }
-        function change(index){
-            for(var j=0;j<aLi.length;j++){
-                    aImg[j].className = '';
-                    aLi[j].className = '';
-            }
-            aLi[index].className = 'active';
-            aImg[index].className = 'selected';
-        }
-        oContainer.onmouseover = function(){
-            clearInterval(timer);
-        }
-        oContainer.onmouseout = function(){
-            run();
         }
         function run(){
             timer = setInterval(function(){
                 oNext.onclick();
-            },1000)
+            },1500);
+        }
+        function change(index){
+            for(var j=0;j<aLi.length;j++){
+                    aLi[j].className = '';
+            }
+            aLi[index].className = 'active';
+            oBox.style.left = -750*index +'px';
+        }
+        oContainer.onmouseout = function(){
+            run();
+        }
+        oContainer.onmouseover = function(){
+            clearInterval(timer);
         }
     </script>
 </body>
