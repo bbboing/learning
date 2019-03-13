@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #small-box{
+            float: left;
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+        #big-box{
+            float: left;
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            display: none;
+        }
+        #drag{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 0;
+            left: 0;
+            background: rgba(112, 112, 112, 0.4);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id='small-box'>
+        <img src="imgs/1.jpg">
+        <span id='drag'></span>
+    </div>
+    <div id='big-box'>
+        <img src="imgs/2.jpg">
+    </div>
+
+
+    <script>
+        oDrag = document.getElementById('drag');
+        oBig = document.getElementById('big-box');
+        oSmall = document.getElementById('small-box');
+        oSmall.onmouseover = function(){
+            oDrag.style.display = 'block';
+            oSmall.onmousemove = function(e){
+                var x = e.clientX - oDrag.offsetWidth/2;
+                var y = e.clientY - oDrag.offsetHeight/2;
+                if(x < 0)
+                    x = 0;
+                if(y < 0)
+                    y = 0;
+                var xMax = oSmall.offsetWidth - oDrag.offsetWidth;
+                var yMax = oSmall.offsetHeight - oDrag.offsetHeight;
+                if(x > xMax)
+                    x = xMax;
+                if(y > yMax)
+                    y = yMax;
+                oDrag.style.left = x + 'px';
+                oDrag.style.top = y + 'px';
+
+                
+
+            }
+            oSmall.onmouseout = function(){
+                oDrag.style.display = 'none';
+                oBig.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
