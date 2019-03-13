@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #menu1,#menu2{
+            width: 120px;
+            height: 30px;
+            background: #ccc;
+            display: none;
+        }
+        #case1,#case2{
+            color: #fff;
+            width: 120px;
+            height: 20px;
+            background: #000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id='case1'>管理区</div>
+        <div id='menu1'></div>
+        <div id='case2'>交流区</div>
+        <div id='menu2'></div>
+    </div>
+
+    <script>
+        oCase1 = document.getElementById('case1');
+        oCase2 = document.getElementById('case2');
+        oMenu1 = document.getElementById('menu1');
+        oMenu2 = document.getElementById('menu2');
+        var clickTime1 = 0;
+        var clickTime2 = 0;
+        oCase1.onclick = function(){
+            if(!clickTime1){
+                clickTime1 = 1;
+                oMenu1.style.display = 'block';
+            }else if(clickTime1){
+                clickTime1 = 0;
+                oMenu1.style.display = 'none';
+            }
+        }
+        oCase2.onclick = function(){
+            if(!clickTime2){
+                clickTime2 = 1;
+                oMenu1.style.display = 'block';
+            }else if(clickTime2){
+                clickTime2 = 0;
+                oMenu1.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

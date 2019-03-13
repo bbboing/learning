@@ -32,6 +32,9 @@
             background: rgba(112, 112, 112, 0.4);
             display: none;
         }
+        #bigImg{
+            position: absolute;
+        }
     </style>
 </head>
 <body>
@@ -40,7 +43,7 @@
         <span id='drag'></span>
     </div>
     <div id='big-box'>
-        <img src="imgs/2.jpg">
+        <img id='bigImg' src="imgs/2.jpg">
     </div>
 
 
@@ -48,8 +51,10 @@
         oDrag = document.getElementById('drag');
         oBig = document.getElementById('big-box');
         oSmall = document.getElementById('small-box');
+        oBigImg = document.getElementById('bigImg');
         oSmall.onmouseover = function(){
             oDrag.style.display = 'block';
+            oBig.style.display = 'block';
             oSmall.onmousemove = function(e){
                 var x = e.clientX - oDrag.offsetWidth/2;
                 var y = e.clientY - oDrag.offsetHeight/2;
@@ -65,9 +70,18 @@
                     y = yMax;
                 oDrag.style.left = x + 'px';
                 oDrag.style.top = y + 'px';
-
                 
+                smallMaxX = oSmall.offsetWidth - oDrag.offsetWidth;
+                smallMaxY = oSmall.offsetHeight - oDrag.offsetHeight;
 
+                bigMaxX = oBigImg.offsetWidth - oBig.offsetWidth;
+                bigMaxY = oBigImg.offsetHeight - oBig.offsetHeight;
+
+                xPrecent = oDrag.offsetLeft/smallMaxX;
+                yPrecent = oDrag.offsetTop/smallMaxY;
+
+                oBigImg.style.left = - bigMaxX*xPrecent + 'px';
+                oBigImg.style.top = - bigMaxY*yPrecent + 'px';
             }
             oSmall.onmouseout = function(){
                 oDrag.style.display = 'none';
