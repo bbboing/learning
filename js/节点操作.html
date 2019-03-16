@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id='div1'></div>
+    <!--sdkufsd-->
+    <div id='div2'></div>
+    <script>
+        var oDiv2 = document.getElementById('div2')
+        //创建节点
+        var oH2 = document.createElement('h2');
+        oH2.innerHTML('hhh');
+        //插入节点 在元素内部后边    appendChild
+        oDiv2.appendChild(oH2);
+        //替换 replaceChild   通过父元素替换  oDiv2.replaceChild(new,old)
+        //删除 removeChild  通过父元素删除
+        //在指定位置插入  insertBefore(newnode, refnode)
+
+    </script>
+</body>
+</html>
