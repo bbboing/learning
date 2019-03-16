@@ -45,9 +45,17 @@
             <li>交流4</li>
         </ul>
     </div>
-
     <script>
-        
+        var oContainer = document.getElementById('container');
+        var aH3 = oContainer.getE
+        var aUl = oContainer.getElementsByTagName('ul');
+        for(var i=0; i<aUl.length; i++){
+            aUl[i].index = i;
+            aUl[i].flag = 1;
+            aUl.onclick = function(){
+                if(this.flag )
+            }
+        }
     </script>
 </body>
 </html>
