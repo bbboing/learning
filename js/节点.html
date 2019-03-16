@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>  
+    <div id='div1'>asidfsdf</div>
+
+    <div id='div1'>asidfsdf</div>
+    <script>
+        var oDiv1 = document.getElementById('div1');
+
+        function next(elem){
+            do{
+                var elem = elem.netSibling;
+            }while(elem && elem.nodeType != 1)
+            return elem;
+        }
+        var oNext = next(oDiv1);
+
+        function previous(elem){
+            do{
+                var elem = elem.previousSibling;
+            }while(elem && elem.nodeType != 1)
+        }
+        var oPrevious = previous(oDiv1);
+    </script>
+</body>
