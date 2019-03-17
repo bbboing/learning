@@ -26,6 +26,9 @@
             width: 120px;
             height: 22px;
         }
+        #container ul{
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -47,13 +50,18 @@
     </div>
     <script>
         var oContainer = document.getElementById('container');
-        var aH3 = oContainer.getE
+        var aH3 = document.getElementsByTagName('h3');
         var aUl = oContainer.getElementsByTagName('ul');
         for(var i=0; i<aUl.length; i++){
-            aUl[i].index = i;
-            aUl[i].flag = 1;
-            aUl.onclick = function(){
-                if(this.flag )
+            aH3[i].index = i;
+            aH3[i].flag = true;
+            aH3[i].onclick = function(){
+                if(this.flag){
+                    aUl[this.index].style.display = 'block';
+                }else{
+                    aUl[this.index].style.display = 'none';
+                }
+                this.flag = !this.flag;
             }
         }
     </script>
