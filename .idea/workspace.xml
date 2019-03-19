@@ -3,6 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="c9f22707-9e36-4bdc-995f-eac381612ce8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/dom.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/this指向.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/垂直导航菜单.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/垂直导航菜单2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/拖拽.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/放大镜/imgs/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/放大镜/imgs/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/放大镜/放大镜.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/无缝轮播图.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/淡入淡出轮播图.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/滑动轮播图.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/节点操作.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/节点遍历.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/轮播图.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/选项卡.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/闭包.html" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,8 +34,15 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="test_tmall.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tmall/test_tmall.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="记住密码.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/JQuery/记住密码.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3371" />
+            <state relative-caret-position="95">
+              <caret line="5" column="57" lean-forward="true" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -27,16 +50,7 @@
         <entry file="file://$PROJECT_DIR$/test/review.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="304">
-              <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="选项卡.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/选项卡.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-209">
-              <caret line="4" column="74" lean-forward="true" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
+              <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -45,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/test/旋转立方体.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
-              <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+              <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -53,15 +67,10 @@
       <file leaf-file-name="五环.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/五环.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="31" column="28" lean-forward="true" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+            <state relative-caret-position="589">
+              <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/test.html">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -102,6 +111,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -112,19 +122,18 @@
             <path>
               <item name="learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="learning" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="JQuery" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/WebstormProjects/fellows31" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
     <property name="node.js.selected.package.prettier" value="" />
@@ -161,6 +170,7 @@
       <updated>1551411459038</updated>
       <workItem from="1551411460418" duration="168000" />
       <workItem from="1551417842255" duration="2859000" />
+      <workItem from="1552978793695" duration="617000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1551411582452</created>
@@ -180,7 +190,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3027000" />
+    <option name="totallyTimeSpent" value="3644000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -216,9 +226,7 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tmall/test_tmall.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3371" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/test/review.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -229,7 +237,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/选项卡.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-209">
+        <state relative-caret-position="76">
           <caret line="4" column="74" lean-forward="true" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
         </state>
       </provider>
@@ -243,13 +251,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/五环.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
+        <state relative-caret-position="589">
           <caret line="31" column="28" lean-forward="true" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/test.html">
+    <entry file="file://$PROJECT_DIR$/tmall/test_tmall.html">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/review.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/选项卡.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="74" lean-forward="true" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/旋转立方体.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/五环.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JQuery/记住密码.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="57" lean-forward="true" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
