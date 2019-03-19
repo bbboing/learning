@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>11</li>
+        <li id='li2'>22</li>
+        <li>33</li>
+        <li>44</li>
+        <li>55</li>
+    </ul>
+    <script src='jquery-1.12.4.js'></script>
+    <script>
+        $("li:nth-child(2n+1)").css('background','red');
+    </script>
+</body>
+</html>
