@@ -11,24 +11,31 @@
     <div id='container'>
         <div class='show-box'>
             <div class='level'>
-                <input type="radio">初级<br>
-                <input type="radio">中级<br>
-                <input type="radio">高级
+                <input type="radio">简单<br>
+                <input type="radio">一般<br>
+                <input type="radio">困难
             </div>
             <div class='time'>
-
+                14:36
             </div>
             <div class='remain'>
-
+                60
             </div>
         </div>
-        <div class='grid-box'></div>
+        <div class='grid-box'>
+            <div class='easy show'>
+                16x16  80雷
+            </div>
+            <div class='normal hide'>
+                20x20   160雷
+            </div>
+            <div class='hard hide'>
+                20x30   240雷
+            </div>
+        </div>
     </div>
     <script src='../JQuery/jquery-1.12.4.js'></script>
     <script>
-        $('button').on('click', function(){
-            $('button').css('background', 'pink');
-        })
     </script>
 </body>
 </html>
