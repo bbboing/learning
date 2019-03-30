@@ -1,0 +1,18 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#container{
+    width: 100%;
+    /* display: -webkit-box; */
+}
+#container .show-box{
+    height: 100px;
+    /* -webkit-box-flex: 1; */
+    background-color: #eee;
+}
+#container .grid-box{
+    height: 400px;
+    /* -webkit-box-flex: 2; */
+    background-color: #ff0;
+}
