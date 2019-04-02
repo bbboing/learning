@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function * fn(){
+        console.log("start");
+        yield request1();
+        console.log("可以请求2");
+    }
+    function request1(){
+        setTimeout(() => {
+            let data = 100;
+            console.log("请求1成功，返回数据"+data);
+            a.next();
+        },1000);
+    }
+    let a = fn();
+    a.next();
+</script>
+</html>
