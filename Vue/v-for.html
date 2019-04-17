@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id='app'>
+        {{ msg }}
+        <div v-for='elem in arr'>{{elem}}</div>
+        <div v-for='obj in list'>{{obj.name}}{{obj.age}}</div>
+    </div>
+    <script src='vue.js'></script>
+    <script>
+        new Vue({
+            el: '#app',    //挂载元素
+            data: {
+                msg: 'Hello World',
+                arr: ['html','css','js'],
+                list: [
+                    {
+                        name:'zs',
+                        age: 23
+                    },{
+                        name: 'ls',
+                        age: 20
+                    }
+                ]
+            },
+            computed: {
+                listSort(){
+                    
+                }
+            }
+        });
+    </script>    
+</body>
+</html>

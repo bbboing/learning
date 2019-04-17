@@ -19,6 +19,27 @@ module.exports = {
                     use: "css-loader"
                 })
                 //use:['style-loader','css-loader']
+            },{
+                test:/\.(jpg|png|gif)$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 500,
+                        outputPath: '/images'
+                    }
+                }]
+            },{
+                test: /\.(htm|himl)$/i,
+                loader: 'html-withimg-loader'
+            },{
+                test: /\.js$/,
+                use: [{
+                    loader: 'babel-loader',
+                    options:{
+                        presets:["@babel/preset-env"]
+                    }
+                }],
+                exclude:/node_modules/
             }
         ]
     },
