@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id='box'>
+        是否需要额外付费设施
+        <input type="checkbox" v-model='isCheck' @click='re()'>
+        <ul v-show='isCheck'>
+            <li v-for='item in list'>
+                {{item.name}} ({{item.price}})
+                <input type="checkbox" v-model='orderlist' :value='item'>
+            </li>
+        </ul>
+        <div>
+            订单费用信息
+            <ul>
+                <li v-for='item in orderlist'>{{item.name}} ({{item.price}})</li>
+            </ul>
+            <span>总金额是 {{total}} 元</span>
+        </div>
+    </div>
+
+    <script src='vue.js'></script>
+    <script>
+        new Vue({
+            el: '#box',
+            data:{
+                list:[{
+                    name:'沙发',
+                    price:100,
+                    check:false
+                },{
+                    name:'wifi',
+                    price:50,
+                    check:false
+                },{
+                    name:'电脑',
+                    price:2000,
+                    check:false
+                }],
+                orderlist:[
+                    {
+                        name:'群力花园豪华型',
+                        price:400
+                    }
+                ],
+                isCheck: false
+            },
+            methods:{
+                re(){
+                        this.orderlist = [this.orderlist[0]];
+                }
+            },
+            computed:{
+                total(){
+                    var sum = 0
+                    this.orderlist.forEach((obj,index) => {
+                        sum += obj.price;
+                    });
+                    return sum;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
