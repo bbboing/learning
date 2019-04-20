@@ -53,7 +53,8 @@
             },
             methods:{
                 re(){
-                        this.orderlist = [this.orderlist[0]];
+                        //this.orderlist = [this.orderlist[0]];
+                        this.orderlist.splice(1);
                 }
             },
             computed:{
