@@ -1,60 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        .red{
-            background: #f00
+        .red {
+            background: #f00;
         }
     </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
+
 <body>
-    <h1>todolist</h1>
-    <div id='list'>
-        <div @click='click()' v-for='elem in product'>
-            {{ elem.name }} {{ elem.price }}
-        </div>
+    <div id="app">
+        <h1 class='text-center'>todolist</h1>
+        <form class="form-inline text-center">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="请输入过滤商品名">
+            </div>
+            <button type="submit" class="btn btn-default" v-model='keyword'@click.prevert='ser()'>过滤</button>
+        </form>
+        <form class="form-inline text-center">
+            <div class="form-group">
+                <label for="exampleInputName2">Name</label>
+                <input type="text" class="form-control" v-model="proName" id="exampleInputName2" placeholder="请输入商品名">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail2">price</label>
+                <input type="number" class="form-control" v-model="proPrice" id="exampleInputEmail2"
+                    placeholder="请输入价格">
+            </div>
+            <button type="submit" class="btn btn-default" @click.prevent="add()">添加</button>
+        </form>
+        <table id='list' class="table table-bordered text-center">
+            <thead>
+                <td>选择</td>
+                <td>商品名称</td>
+                <td>商品价格</td>
+                <td>删除</td>
+            </thead>
+            <tbody>
+                <tr  v-for='(pro,index) in product' @click='change(pro)' :class='{red: pro.isRed}'>
+                    <td><input type="checkbox" v-model=pro.isRed></td>
+                    <td>{{pro.name}}</td>
+                    <td>{{pro.price}}</td>
+                    <td><button type="button" class="btn btn-warning glyphicon glyphicon-remove btn-xs" @click.stop='delOne()'></button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="btn btn-danger btn-xs" @click="del(index)">删除选中</button></td>
+                    <td colspan="3">总价是: {{total}} 元</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+
 
     <script src='vue.js'></script>
     <script>
-        new Vue({
-            el:'#list',
-            data:{
-                product:[
+        vm = new Vue({
+            el: '#app',
+            data: {
+                product: [
                     {
                         name: "衣服",
                         price: 123,
-                        isRed: false
-                    },{
+                        isRed: false,
+                        isShow: true
+                    }, {
                         name: "裤子",
                         price: 234,
-                        isRed: false
-                    },{
+                        isRed: false,
+                        isShow: true
+                    }, {
                         name: "鞋子",
                         price: 343,
-                        isRed: false
-                    },{
+                        isRed: false,
+                        isShow: true
+                    }, {
                         name: "手机",
                         price: 654,
-                        isRed: false
-                    },{
+                        isRed: false,
+                        isShow: true
+                    }, {
                         name: "袜子",
                         price: 93,
-                        isRed: false
+                        isRed: false,
+                        isShow: true
                     }
-                ]
+                ],
+                proName: '',
+                proPrice: 0,
+                keyword:''
             },
             methods: {
-                click(){
-                    this.isRed = !this.isRed;
-                    console.log(this.isRed);
+                add() {
+                    console.log(11111111111111)
+                    this.product.push({
+                        name: this.proName,
+                        price: this.proPrice,
+                        isRed: false
+                    })
+                },
+                change(pro) {
+                    pro.isRed = !pro.isRed;
+                },
+                del() {
+                    //索引问题不能解决
+                    // this.product.forEach((obj, index) => {
+                    //     if (obj.isRed)
+                    //         this.product.splice(index, 1);
+                    // })
+                    let arr = this.product.filter(function(obj){
+                        return !obj.isRed;
+                    })
+                    this.product = arr;
+                },
+                delOne(index){
+                    this.product.splice(index,1);
+                },
+                ser(keyword){
+                    this.product.filter(function(obj,index){
+                        obj.name.includes(this.keyword);
+                    })
+                }
+            },
+            computed: {
+                total() {
+                    sum = 0;
+                    this.product.forEach((obj, index) => {
+                        if (obj.isRed)
+                            sum += obj.price;
+                    })
+                    return sum;
                 }
             }
         })
     </script>
 </body>
+
 </html>
