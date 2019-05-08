@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var str='skehefcvbnmghjkcvbnmghj';
+    var key=[];
+    for(var i=0;i<str.length;i++){
+        var char = str[i];
+        for(var j=0;j<key.length;j++){
+            if(key[j].val == char){
+                key[j].count ++;
+                break;
+            }
+        }
+        if(j == key.length)
+            key.push({val:char,count:1});
+    }
+    index = 0;
+    for(var i=0;i<key.length;i++){
+        if(key[index].count < key[i].count)
+            index = i;
+    }
+    console.log(key[index]);
+
+</script>
+</html>
