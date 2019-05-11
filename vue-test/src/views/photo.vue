@@ -16,7 +16,7 @@
             .then((result) => {
                 //this.photoData = result.data.photoData;     
                 //使用vuex存储数据
-                this.$store/commit('addPhoto', result.data.photoData);
+                this.$store.commit('addPhoto', result.data.photoData);
             })
         },
         methods:{
