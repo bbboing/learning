@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <common-header ></common-header>
-    内容
-    <common-footer :menu="menu"></common-footer>
+    <common-header :selectMenu='selectMenu'></common-header>
+    <div id='content'>
+      <router-view></router-view>
+    </div>
+    <common-footer :menu="menu" :selectMenu='selectMenu' @change="fn" ></common-footer>
   </div>
 </template>
 <script>
@@ -29,12 +31,28 @@ export default {
           path:'/photo',
           bg:'#ffaa00'
         }
-      ]
+      ],
+      selectMenu:{
+        name:'电影',
+        path:'/movie',
+        bg:'#f00'
+      }
     }
   },
   components:{
     CommonHeader,
     CommonFooter
+  },
+  methods:{
+    fn(index){
+      this.selectMenu = this.menu[index];
+    },
+    created(){
+      this.menu.foreach( (obj) => {
+        if(obj.path == this.$route.path)
+          this.selectMenu = obj;
+      })
+    }
   }
 }
 </script>

@@ -1,23 +1,16 @@
 <template>
     <div class='footer'>
-        <ul class='footer-list'>
-            <li >
-                <router-link to='/movie'>电影</router-link>
+        <ul class='footer-list' :style='{background:selectMenu.bg}'>
+            <li v-for="(obj,index) in menu" :key="index" >
+                <router-link :to="obj.path">{{obj.name}}</router-link>
             </li>
-            <li>
-                <router-link to='/music'>音乐</router-link></li>
-            <li>
-                <router-link to='/book'>图书</router-link></li>
-            <li>
-                <router-link to='/photo'>图片</router-link></li>
         </ul>
     </div>
 </template>
 
 <script>
     export default {
-        props:['menu']
-        
+        props:['menu','selectMenu']
     }
 </script>
 
@@ -43,5 +36,8 @@
     }
     .footer-list a.router-link-active{
         color:#fff;
+    }
+    .footer-list a:active{
+        background: none;
     }
 </style>
