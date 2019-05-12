@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id='app'></div>
+    <script src='react.development.js'></script>
+    <script src='react-dom.development.js'></script>
+    <script src='browser.min.js'></script>
+    <script type="text/babel">
+        //组件名称要大写
+        //根元素只能有一个
+        //JXS html必须有结束标签
+        const Hello = () => {
+            return <h2>hello</h2>
+        }
+        ReactDOM.render(
+            <Hello></Hello>,
+            document.getElementById('app')
+        )
+    </script>
+</body>
+</html>
