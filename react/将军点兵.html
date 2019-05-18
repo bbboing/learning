@@ -15,13 +15,28 @@
         class Main extends React.Component{
             constructor(params){
                 super(params);
+                this.minus = this.minus.bind(this);
+                this.state = {
+                    allSolider : 120
+                }
+            }
+            minus(n){
+                all = this.state.allSolider;
+                if(all - n < 0){
+                    console.log('Not enough');
+                }else{
+                    this.setState({
+                        allSolider : this.state.allSolider - n
+                    })
+                }
+                
             }
             render(){
                 return(
                     <div>
-                        <h1>剩余士兵数量120</h1>
-                        <General name='A' num='100'></General>
-                        <General name='B' num='80'></General>
+                        <h1>剩余士兵数量{this.state.allSolider}</h1>
+                        <General name='A' numberOfSolider='100'></General>
+                        <General name='B' numberOfSolider='80'></General>
 
                     </div>
                 )
@@ -32,18 +47,19 @@
                 super(params);
                 this.change = this.change.bind(this);
                 this.state = {
-                    num : this.props.num
+                    num : parseInt(this.props.numberOfSolider)
                 }
             }
             change(n){
                 this.setState({
-                    num : 1
+                    num : parseInt(n) + this.state.num
                 })
+                console.log(this.state.num);
             }
             render(){
                 return(
                     <div>
-                        <h3>将军{this.props.name}现有士兵{this.props.num}</h3>
+                        <h3>将军{this.props.name}现有士兵{this.state.num}</h3>
                         <div>
                             <input type='number' ref='number'/>
                             <button onClick={() => {

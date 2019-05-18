@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id='app'></div>
+    <script src='react.development.js'></script>
+    <script src='react-dom.development.js'></script>
+    <script src='browser.min.js'></script>
+    <script type="text/babel">
+        class Main extends React.Component{
+            constructor(params){
+                super(params);
+                this.add = this.add.bind(this);
+                this.delOne = this.delOne.bind(this);
+                this.state = {
+                    list : ['吃饭', '睡觉', '打代码']
+                }
+            }
+            delOne(index){
+                var newList = [...this.state.list];
+                newList.splice(index,1);
+                this.setState({
+                    list : newList
+                })
+            }
+            add(newItem){
+                this.setState({
+                    list : [...this.state.list,newItem]
+                })
+            }
+            render(){
+                return(
+                    <div>
+                        <h1>Simple TODO List</h1>
+                        <Search></Search>
+                        <AddItem add={this.add}></AddItem>
+                        <List delOne={this.delOne} list={this.state.list}></List>
+                    </div>
+                )
+            }
+        }
+        class Search extends React.Component{
+            constructor(params){
+                super(params);
+            }
+            render(){
+                return(
+                    <div>
+                        <input type='text'/>
+                        <button>Search</button><br/>
+                    </div>
+                )
+            }
+        }
+        class AddItem extends React.Component{
+            constructor(params){
+                super(params);
+            }
+            render(){
+                return(
+                    <div>
+                        <input type='text' ref='newItem'/>
+                        <button onClick={() => {
+                            this.props.add(this.refs.newItem.value)
+                        }}>add</button>
+                    </div>
+                )
+            }
+        }
+        class List extends React.Component{
+            constructor(params){
+                super(params);
+                this.change=this.change.bind(this);
+                this.state = {
+                    choose : [false,false,false]
+                }
+            }
+            change(index){
+                var newChoose = [...this.state.choose];
+                newChoose[index] = !newChoose[index];
+                this.setState({
+                    choose : newChoose
+                });
+            }
+            render(){
+                let red = {
+                    background : '#f00'
+                };
+                return(
+                    <ul>
+                        {
+                            this.props.list.map((val,index)=>{
+                                return (
+                                        <li style={{background:(this.state.choose[index]?'#f00':'none')}}key={index}>
+                                            <input type='checkbox' ref='choose' onChange={() => {
+                                                this.change(index);
+                                            }}/>
+                                            {val}&nbsp;&nbsp;
+                                            <button onClick={() => {
+                                                this.props.delOne(index);
+                                            }}>删除</button>
+                                        </li>
+                                )
+                            })
+                        }
+                    </ul>
+                )
+            }
+        }
+        ReactDOM.render(
+            <Main></Main>,
+            document.getElementById('app')
+        );
+    </script>
+</body>
+</html>
