@@ -12,21 +12,22 @@
     <script src='react-dom.development.js'></script>
     <script src='browser.min.js'></script>
     <script type="text/babel">
-        //组件名称要大写
-        //根元素只能有一个
-        //JXS html必须有结束标签
-        //函数定义  无状态组件
-        const Hello = (props) => {
-            return <h2>{props.name}</h2>
-        }
-        const Button = () => {
-            return <button>click me!</button>
+        //有状态组件
+        class Hello extends React.Component{
+            render(){
+                return (
+                    <div>
+                        <h1>{this.props.name}</h1>
+                        {this.props.children}
+                        <button>click me</button>
+                    </div>
+                )
+            }
         }
         ReactDOM.render(
-            <div>
-                <Hello name='hellohello' content='slie'></Hello>
-                <Button></Button>
-            </div>,
+            <Hello name='hahahha'>
+                <h3>sssss</h3>
+            </Hello>,
             document.getElementById('app')
         )
     </script>

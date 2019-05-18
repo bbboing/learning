@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id='app'></div>
+
+    <script src='react.development.js'></script>
+    <script src='react-dom.development.js'></script>
+    <script src='browser.min.js'></script>
+
+    <script type="text/babel">
+        //有状态组件
+        class MyComponent extends React.Component{
+            constructor(params){
+                super(params);
+                //初始化 state是一个对象
+                this.state = {
+                    num:0
+                }
+                this.add() = this.add.bind(this);
+            }
+            //自定义的方法中this是undefined
+            add(){
+                this.setState({
+                    num:this.state.num+1
+                })
+            }
+
+            render(){
+                return (
+                    <div>
+                        <h1>My Component {this.state.num}</h1>
+                        <button onClick={this.add}>click me add</button>
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render(
+            <MyComponent></MyComponent>,
+            document.getElementById('app')
+        )
+    </script>
+</body>
+</html>
