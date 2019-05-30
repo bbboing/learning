@@ -1,0 +1,14 @@
+.header-top{
+    height: 50px;
+    line-height: 50px;
+    text-align: right;
+    border-bottom: 1px solid #000c16;
+    padding: 0 20px;
+}
+.header-name{
+    margin-right:20px
+}
+.header-time{
+    text-align: right;
+    padding: 0 20px;
+}

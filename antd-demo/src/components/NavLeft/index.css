@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0
+}
+.logobox{
+    width:100%;
+    height:80px;
+    line-height: 80px;
+    text-align: center;
+}
+.logobox img{
+    width: 80%;
+}

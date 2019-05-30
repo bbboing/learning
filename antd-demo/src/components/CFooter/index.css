@@ -1,0 +1,11 @@
+
+.footer-words{
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: #5e5e5e;
+    background: #eee;
+    position: absolute;
+    bottom: 0
+}
