@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div style='text-align: center'></div>
+    <form action="/reg" method='post'>
+        用户名：<input type="text" name='uname' id='u1'> <br/>
+        密码：<input type="password" name='psw'> <br/>
+        <input type="submit" name='sub' value='注册'>
+    </form>
+
+    <script src='../public/javascripts/jquery-1.12.4.js'></script>
+    <script>
+      $('#u1').blur(function(){
+        var val=$(this).val();
+      })
+    </script>
+  </body>
+</html>
