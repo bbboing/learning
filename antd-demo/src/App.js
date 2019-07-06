@@ -12,7 +12,6 @@ function App(props) {
       <Row>
         <Col span={4} className='navleft'>
           <NavLeft></NavLeft>
-          <Button>button</Button>
         </Col>
         <Col span={20} className='navR'>
           <CHeader></CHeader>
